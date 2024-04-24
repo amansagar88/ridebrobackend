@@ -4,7 +4,7 @@ import cors from  'cors';
 const app = express();
 app.use(cors(
     {
-        origin : ["https://ridebro.vercel.app/"],
+        origin : ["https://ridebro.vercel.app"],
         methods :["GET", "POST"] ,
         credentials : true
     }
