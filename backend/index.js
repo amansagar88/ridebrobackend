@@ -11,7 +11,7 @@ app.use(cors(
 ));
 
 app.get("/getData", (req, res)=>{
-    res.send("Hello World! from backend");
+    // res.send("Hello World! from backend");
     res.json("hello")
 })
 
