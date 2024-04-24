@@ -12,6 +12,7 @@ app.use(cors(
 
 app.get("/getData", (req, res)=>{
     res.send("Hello World! from backend");
+    res.json("hello")
 })
 
 app.listen(5000, ()=> console.log("App is running"));
