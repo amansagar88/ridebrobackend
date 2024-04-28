@@ -13,7 +13,7 @@ app.use(express.json());
 // uncomment before deploment
 app.use(cors(
     {
-        origin : ["https://ridebro.vercel.app"],
+        origin : ["https://ridebro.vercel.app/"],
         methods :["GET", "POST"] ,
         credentials : true
     }
