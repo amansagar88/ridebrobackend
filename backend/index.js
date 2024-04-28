@@ -19,7 +19,7 @@ app.use(cors(
     }
 ));
 
-app.use(cors());
+// app.use(cors());
 
 app.use(require('./router/auth'));
 
