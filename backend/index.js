@@ -23,6 +23,6 @@ app.use(cors(
 
 app.use(require('./router/auth'));
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 
-app.listen(PORT, ()=> console.log('App is running', PORT));
+app.listen(5000, ()=> console.log('App is running', PORT));
