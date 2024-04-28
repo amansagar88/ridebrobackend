@@ -1,7 +1,16 @@
-import express from  'express';
-import cors from  'cors';
+const express = require('express');
+const cors =  require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config({path: './config.env'});
+
+require('./model/userschema.js');
+require('./db/conn')
 
 const app = express();
+
+app.use(express.json());
+// uncomment before deploment
 app.use(cors(
     {
         origin : ["https://ridebro.vercel.app"],
@@ -10,8 +19,10 @@ app.use(cors(
     }
 ));
 
-app.get("/", (req, res)=>{
-    res.json("Hello World! from backend");
-})
+app.use(cors());
 
-app.listen(5000, ()=> console.log("App is running"));
+app.use(require('./router/auth'));
+
+const PORT = process.env.PORT;
+
+app.listen(PORT, ()=> console.log('App is running', PORT));
